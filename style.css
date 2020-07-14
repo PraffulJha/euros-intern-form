@@ -1,0 +1,109 @@
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0;
+    line-height: 1.5;
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    background-color: gainsboro;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.Profile{
+    border: 10px solid #356;
+}
+
+.header{
+    padding: 20px;
+    text-align: left;
+}
+.header hr{
+    margin-top: 10px;
+    max-width: 1200px;
+    border: 2px solid #000000;
+}
+.container{
+    max-width: 1100px;
+    margin: auto;
+}
+.Profile-basic-form{
+    width: 500px;
+	height: auto;
+	position: relative;
+	margin: 6% auto;
+	background: transparent;
+	padding: 5px;
+	overflow: hidden;
+}
+section{
+	border: 5px solid #356;
+	height: auto;
+	width: auto;
+	outline: thin;
+}
+.input-text{
+    width: 95%;
+	padding: 10px 0;
+	border-left: 0;
+	border-right: 0;
+	border-top: 0;
+	border-bottom: 1px solid rgb(124, 120, 120);
+	outline: none;
+	background: transparent;
+}
+.fa{
+    font-size: 20px;
+    margin-bottom: 20px;
+	text-decoration: none;
+	text-align: center;
+}
+.submit-btn{
+	width: 50%;
+	padding: 5px 30px;
+	cursor: pointer;
+	display: block;
+    margin: auto;
+    bottom: 5px;
+	background: linear-gradient(to right, #356, rgb(16, 16, 253));
+	border: 0;
+	outline: none;
+	border-radius: 30px;
+}
+.input-title{
+    width: 50%;
+	padding: 10px 0;
+	border-left: 0;
+	border-right: 0;
+	border-top: 0;
+	border-bottom: 1px solid rgb(124, 120, 120);
+	outline: none;
+	background: transparent;
+}
+.save-button{
+    width: 20%;
+	padding: 5px 30px;
+	cursor: pointer;
+	display: block;
+    margin: auto;
+    bottom: 5px;
+	background: linear-gradient(to left, #289, rgb(16, 16, 253));
+	border: 0;
+	outline: none;
+	border-radius: 10px;
+	text-align: center;
+	color: burlywood;
+	margin-bottom: 5px;
+}
+.fa{
+	font-size: 16px;
+	color: blue;
+}
+.work-exp{
+	list-style-type: none;
+}

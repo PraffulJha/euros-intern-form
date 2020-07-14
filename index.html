@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta  charset="utf-8">
+        <meta name="viewpoint" content="width=device-width, initial-scale=1">
+        <title>form</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+        <script type="text/javascript" src="script.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+            $(document).ready(function(){
+                $('.mdb-select').materialSelect();
+            });
+        </script>        
+    </head>
+    <body>
+        <Section class="Profile">
+            <div class="header">
+                <h2>Profile</h2>
+                <hr>
+            </div>
+                <div class="Profile-basic-form">
+                    <div class="container">
+                        <form action="#" class="Profile-form-group"> 
+                            <input type="text" class="input-text" placeholder="Name">
+                            <input type="text" class="input-text" placeholder="Course">
+                            <input type="text" class="input-text" placeholder="college/university">
+                            <input type="email" class="input-text" placeholder="email">
+                            <input type="text" class="input-text" placeholder="number">
+                            <input type="text" class="input-text" placeholder="city">
+                            <input type="url" class="input-text" placeholder="Link of linkdenIn Profile">
+                            <input type="file" style="margin: 10px; margin-bottom: 10px;">
+                            <input type="text" class="input-text" placeholder="about you">
+                            <button type="submit" class="submit-btn">save</button>
+                        </form>
+                    </div>
+                    
+            </div>
+        </Section>
+        <Section class="Skills">
+            <div class="header">
+                <h2>Skills</h2>
+                <hr>
+                <div class="Skills-form">
+                    <div class="container">
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <input type="text" class="input-text" placeholder="title">
+                            </div>
+                            <div class="col">
+                                <i class="fa fa-star-o"></i>
+                                <i class="fa fa-star-o"></i>
+                                <i class="fa fa-star-o"></i>
+                            </div>
+                            <div class="col">
+                                <button type="button" class="btn btn-outline-dark">Add Certificate</button>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <input type="text" class="input-text" placeholder="title">
+                            </div>
+                            <div class="col">
+                                <i class="fa fa-star-o"></i>
+                                <i class="fa fa-star-o"></i>
+                                <i class="fa fa-star-o"></i>
+                            </div>
+                            <div class="col">
+                                <button type="button" class="btn btn-outline-dark" style="margin-bottom: 20px;">Add Certificate</button>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <input type="text" class="input-text" placeholder="title">
+                            </div>
+                            <div class="col">
+                                <i class="fa fa-star-o"></i>
+                                <i class="fa fa-star-o"></i>
+                                <i class="fa fa-star-o"></i>
+                            </div>
+                            <div class="col"></div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <input type="text" class="input-text" placeholder="title">
+                                </div>
+                                <div class="col">
+                                    <i class="fa fa-star-o"></i>
+                                    <i class="fa fa-star-o"></i>
+                                    <i class="fa fa-star-o"></i>
+                                </div>
+                                <div class="col"></div>
+                            </div>
+                        <button class="save-button">Save</button>
+              </div>
+        </Section>
+        <Section class="Projects">
+            <div class="header">
+                <h2>Projects</h2>
+                <hr>     
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-3 col-sm-4">
+                        <input type="text" class="input-title" placeholder="Project title">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-3 col-sm-4">
+                        <input type="text" class="input-text" placeholder="short description">
+                    </div><div class="col-xs3-3 col-sm-4"></div>
+                    <div class="col-xs-3 col-sm-4">
+                        <input type="file" style="margin: 10px; margin-bottom: 10px;">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-3 col-sm-4">
+                        <input type="text" class="input-title" placeholder="Project title">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-3 col-sm-4">
+                        <input type="text" class="input-text" placeholder="short description">
+                    </div><div class="col-xs3-3 col-sm-4"></div>
+                    <div class="col-xs-3 col-sm-4">
+                        <input type="file" style="margin-bottom: 20px;">
+                    </div>
+                </div>     
+            </div>
+            <button class="save-button">Save</button>
+        </Section>
+        <section class="Work-experience">
+            <div class="header">
+                <h2>WORK EXPERIENCE</h2>
+                <hr>
+            </div>
+            <div class="container">
+                        <div class="row">
+                            <div class="col">
+                                <div id="readroot" style="display: none">
+                
+                                    <input type="button" value="REMOVE" class="btn btn-outline-dark"
+                                        onclick="this.parentNode.parentNode.removeChild(this.parentNode);" /><br /><br />
+                                        <input type="text"  class="input-title" placeholder="Company/Organisation name"><br>
+                                        <input type="text" class="input-title" placeholder="Job title"><br>
+                                        <input type="date" style=" margin: 10px; margin-bottom: 20px;"><br>
+                                        <input type="text" class="input-title" placeholder="About the role">
+                                          
+                                </div> 
+                                <form method="post" action="#">
+                        
+                                    <span id="writeroot"></span>
+                                
+                                    <input type="button" onclick="moreFields()" value="ADD MORE" class="btn btn-outline-dark" style=" margin: 20px; margin-bottom: 20px;" />                     
+                                </form> 
+                            </div>
+                        </div>
+                    </div>
+                    <button class="save-button">Save</button>
+        </section>
+        <section class="education">
+            <div class="header">
+                <h2>
+                    EDUCATION
+                </h2>
+                <hr>
+            </div>
+            <div class="container">
+                <form id="myform">
+                <ul style="list-style-type: none;">
+                        <li><h4>B.Tech</h4> 
+                            <select class="mdb-select md-form">
+                                <option value="" disabled selected>Select Branch</option>
+                                <option value="1">Mechanical Engineering</option>
+                                <option value="2">Computer Science & Engineering</option>
+                                <option value="3">Information Technology</option>
+                                <option value="3">Civil Engineering</option>
+                                <option value="3">Chemical Engineering</option>
+                              </select>
+                              <label class="mdb-main-label"></label>
+                    </li>
+                    <li><input type="text" class="input-title" placeholder="college/University"></li>
+                    <li><span>Session</span><input type="number" min="1900" max="2099" step="1" style="margin: 10px; margin-bottom: 10px;" /><span>to</span>
+                        <input type="number" min="1900" max="2099" step="1" /></li>
+                    <li><input type="number" min="1" max="100" id="myPercent" placeholder="%" class="input-title"/></li>
+                </ul>
+                <ul style="list-style-type: none;">
+                <li><h4>12<sup>th</sup></h4></li>
+                <li><input class="input-title" type="text" placeholder="School Name"></li>
+                <li><span>Year</span><input type="number" min="2000" max="2099" step="1" style="margin: 10px; margin-bottom: 10px;" /></li>
+                <li><input type="number" min="1" max="100" id="myPercent" placeholder="%" class="input-title"/></li>
+                </ul>
+                <ul style="list-style-type: none;">
+                    <li><h4>10<sup>th</sup></h4></li>
+                    <li><input class="input-title" type="text" placeholder="School Name"></li>
+                    <li><span>Year</span><input type="number" min="2000" max="2099" step="1" style="margin: 10px; margin-bottom: 10px;" /></li>
+                    <li><input type="number" min="1" max="100" id="myPercent" placeholder="%" class="input-title"/></li>
+                    </ul>
+                    </form>             
+            </div>
+            <button class="save-button">Save</button>
+        </section>
+        <section class="Achievement">
+            <div class="header">
+                <h2>ACHIEVEMENT</h2>
+                <hr>
+            </div>
+            <div class="container">
+                <form action="#">
+                    <ul style="list-style-type: none;">
+                    <li><input type="text" class="input-text" placeholder="Your achievement"></li>
+                    <li><input type="text" class="input-text" placeholder="Your achievement"></li>
+                    <li><input type="text" class="input-text" placeholder="Your achievement"></li>
+                    <li><input type="text" class="input-text" placeholder="Your achievement"></li>
+                    </ul>
+                </form>
+            </div>
+            <button class="save-button">Save</button>
+        </section>
+    </body>
+    <script>
+        document.getElementById('myForm').onsubmit = function() {
+            var valInDecimals = document.getElementById('myPercent').value / 100;
+}
+    </script>
+</html>
