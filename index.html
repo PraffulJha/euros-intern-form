@@ -22,7 +22,7 @@
             </div>
                 <div class="Profile-basic-form">
                     <div class="container">
-                        <form action="#" class="Profile-form-group"> 
+                        <form action="profile.php" class="Profile-form-group"> 
                             <input type="text" class="input-text" placeholder="Name">
                             <input type="text" class="input-text" placeholder="Course">
                             <input type="text" class="input-text" placeholder="college/university">
@@ -43,56 +43,21 @@
                 <h2>Skills</h2>
                 <hr>
                 <div class="Skills-form">
-                    <div class="container">
+                        <div class="container">
+                            <div id="readroot" style="display: none">
+                                <input type="text" class="input-title" placeholder="Your Skill"><br>
+                                <input type="radio">Begineer<input type="radio">Intermediate<input type="radio">Expert<br>
+                                If you have any certificate<br>
+                                <input type="file">
+                                <input type="button" value="Remove" class="btn btn-outline-dark"
+                                    onclick="this.parentNode.parentNode.removeChild(this.parentNode);" /><br /><br />
+                            </div>
+                            <form method="post" action="/cgi-bin/show_params.cgi">
+                                <span id="writeroot"></span>
+                            
+                                <input type="button" onclick="moreFields()" value="Add more" class="btn btn-outline-dark">
+                            </form>
                         </div>
-                        <div class="row">
-                            <div class="col">
-                                <input type="text" class="input-text" placeholder="title">
-                            </div>
-                            <div class="col">
-                                <i class="fa fa-star-o"></i>
-                                <i class="fa fa-star-o"></i>
-                                <i class="fa fa-star-o"></i>
-                            </div>
-                            <div class="col">
-                                <button type="button" class="btn btn-outline-dark">Add Certificate</button>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col">
-                                <input type="text" class="input-text" placeholder="title">
-                            </div>
-                            <div class="col">
-                                <i class="fa fa-star-o"></i>
-                                <i class="fa fa-star-o"></i>
-                                <i class="fa fa-star-o"></i>
-                            </div>
-                            <div class="col">
-                                <button type="button" class="btn btn-outline-dark" style="margin-bottom: 20px;">Add Certificate</button>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col">
-                                <input type="text" class="input-text" placeholder="title">
-                            </div>
-                            <div class="col">
-                                <i class="fa fa-star-o"></i>
-                                <i class="fa fa-star-o"></i>
-                                <i class="fa fa-star-o"></i>
-                            </div>
-                            <div class="col"></div>
-                            </div>
-                            <div class="row">
-                                <div class="col">
-                                    <input type="text" class="input-text" placeholder="title">
-                                </div>
-                                <div class="col">
-                                    <i class="fa fa-star-o"></i>
-                                    <i class="fa fa-star-o"></i>
-                                    <i class="fa fa-star-o"></i>
-                                </div>
-                                <div class="col"></div>
-                            </div>
                         <button class="save-button">Save</button>
               </div>
         </Section>
@@ -153,7 +118,7 @@
                         
                                     <span id="writeroot"></span>
                                 
-                                    <input type="button" onclick="moreFields()" value="ADD MORE" class="btn btn-outline-dark" style=" margin: 20px; margin-bottom: 20px;" />                     
+                                    <input type="button" onclick="onFields()" value="ADD MORE" class="btn btn-outline-dark" style=" margin: 20px; margin-bottom: 20px;" />                     
                                 </form> 
                             </div>
                         </div>
