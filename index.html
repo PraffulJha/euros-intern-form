@@ -7,7 +7,11 @@
         <link rel="stylesheet" type="text/css" href="style.css">
         <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-        <script type="text/javascript" src="script.js"></script>
+        <script type="text/javascript" src="./js/script.js"></script>
+        <script type="text/javascript" src="./js/project.js"></script>
+        <script type="text/javascript" src="./js/skills.js"></script>
+        <script type="text/javascript" src="./js/edu.js"></script>
+        <script type="text/javascript" src="./js/achive.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
             $(document).ready(function(){
                 $('.mdb-select').materialSelect();
@@ -22,16 +26,16 @@
             </div>
                 <div class="Profile-basic-form">
                     <div class="container">
-                        <form action="profile.php" class="Profile-form-group"> 
-                            <input type="text" class="input-text" placeholder="Name">
-                            <input type="text" class="input-text" placeholder="Course">
-                            <input type="text" class="input-text" placeholder="college/university">
-                            <input type="email" class="input-text" placeholder="email">
-                            <input type="text" class="input-text" placeholder="number">
-                            <input type="text" class="input-text" placeholder="city">
-                            <input type="url" class="input-text" placeholder="Link of linkdenIn Profile">
-                            <input type="file" style="margin: 10px; margin-bottom: 10px;">
-                            <input type="text" class="input-text" placeholder="about you">
+                        <form action="profile.php" class="Profile-form-group" method="POST"> 
+                            <input type="text" class="input-text" placeholder="Name" name="name" required>
+                            <input type="text" class="input-text" placeholder="Course" name="course"  required>
+                            <input type="text" class="input-text" placeholder="college/university" name="college"  required>
+                            <input type="email" class="input-text" placeholder="email" name="email"  required>
+                            <input type="text" class="input-text" placeholder="number" name="number"  required>
+                            <input type="text" class="input-text" placeholder="city" name="city"  required>
+                            <input type="url" class="input-text" placeholder="Link of linkdenIn Profile" name="linkprofile"  required>
+                            <input type="file" style="margin: 10px; margin-bottom: 10px;" name="file"  required>
+                            <input type="text" class="input-text" placeholder="about you" name="about"  required>
                             <button type="submit" class="submit-btn">save</button>
                         </form>
                     </div>
@@ -41,25 +45,31 @@
         <Section class="Skills">
             <div class="header">
                 <h2>Skills</h2>
-                <hr>
-                <div class="Skills-form">
-                        <div class="container">
-                            <div id="readroot" style="display: none">
-                                <input type="text" class="input-title" placeholder="Your Skill"><br>
-                                <input type="radio">Begineer<input type="radio">Intermediate<input type="radio">Expert<br>
-                                If you have any certificate<br>
-                                <input type="file">
-                                <input type="button" value="Remove" class="btn btn-outline-dark"
-                                    onclick="this.parentNode.parentNode.removeChild(this.parentNode);" /><br /><br />
-                            </div>
-                            <form method="post" action="/cgi-bin/show_params.cgi">
-                                <span id="writeroot"></span>
-                            
-                                <input type="button" onclick="moreFields()" value="Add more" class="btn btn-outline-dark">
-                            </form>
-                        </div>
-                        <button class="save-button">Save</button>
-              </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div id="skills" style="display: none">
+                            <input type="text"  class="input-title" placeholder="ADD skills"><br>
+                                <input type="radio">Begineer<input type="radio">Intermediate<input type="radio">Expert<br />
+                                <span>IF you have any certificate</span>
+                                <input type="file">ADD HERE
+                            <input type="button" value="REMOVE" class="btn btn-outline-dark"
+                                onclick="this.parentNode.parentNode.removeChild(this.parentNode);" /><br /><br />
+                                
+                                  
+                        </div> 
+                        <form method="post" action="#">
+                
+                            <span id="writeskills">
+                        
+                            <input type="button" onclick="moreFields()" value="ADD MORE" class="btn btn-outline-dark" style=" margin: 20px; margin-bottom: 20px;" />
+                        </span>                     
+                        </form> 
+                    </div>
+                </div>
+            </div>
+            <button class="save-button">Save</button>
         </Section>
         <Section class="Projects">
             <div class="header">
@@ -68,31 +78,23 @@
             </div>
             <div class="container">
                 <div class="row">
-                    <div class="col-xs-3 col-sm-4">
-                        <input type="text" class="input-title" placeholder="Project title">
+                    <div class="col">
+                        <div id="project" style="display: none">
+                           <input type="text" class="input-title" placeholder="project title" /><br>
+                           <input type="text" class="input-text" placeholder="project description"><br>
+                           <input type="file" style="margin: 20px; margin-bottom: 20px;">
+                            <input type="button" value="REMOVE" class="btn btn-outline-dark"
+                                onclick="this.parentNode.parentNode.removeChild(this.parentNode);" /><br /><br />
+                                  
+                        </div> 
+                        <form method="post" action="#">
+                
+                            <span id="writeproject"></span>
+                        
+                            <input type="button" onclick="onFields()" value="ADD MORE" class="btn btn-outline-dark" style=" margin: 20px; margin-bottom: 20px;" />                     
+                        </form> 
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-xs-3 col-sm-4">
-                        <input type="text" class="input-text" placeholder="short description">
-                    </div><div class="col-xs3-3 col-sm-4"></div>
-                    <div class="col-xs-3 col-sm-4">
-                        <input type="file" style="margin: 10px; margin-bottom: 10px;">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-xs-3 col-sm-4">
-                        <input type="text" class="input-title" placeholder="Project title">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-xs-3 col-sm-4">
-                        <input type="text" class="input-text" placeholder="short description">
-                    </div><div class="col-xs3-3 col-sm-4"></div>
-                    <div class="col-xs-3 col-sm-4">
-                        <input type="file" style="margin-bottom: 20px;">
-                    </div>
-                </div>     
             </div>
             <button class="save-button">Save</button>
         </Section>
@@ -104,21 +106,20 @@
             <div class="container">
                         <div class="row">
                             <div class="col">
-                                <div id="readroot" style="display: none">
-                
-                                    <input type="button" value="REMOVE" class="btn btn-outline-dark"
-                                        onclick="this.parentNode.parentNode.removeChild(this.parentNode);" /><br /><br />
+                                <div id="workexperience" style="display: none">
                                         <input type="text"  class="input-title" placeholder="Company/Organisation name"><br>
                                         <input type="text" class="input-title" placeholder="Job title"><br>
                                         <input type="date" style=" margin: 10px; margin-bottom: 20px;"><br>
                                         <input type="text" class="input-title" placeholder="About the role">
-                                          
+                                         <input type="button" value="REMOVE" class="btn btn-outline-dark"
+                                        onclick="this.parentNode.parentNode.removeChild(this.parentNode);" /><br /><br />
                                 </div> 
                                 <form method="post" action="#">
                         
-                                    <span id="writeroot"></span>
+                                    <span id="writeexp">
                                 
-                                    <input type="button" onclick="onFields()" value="ADD MORE" class="btn btn-outline-dark" style=" margin: 20px; margin-bottom: 20px;" />                     
+                                    <input type="button" onclick="edFields()" value="ADD MORE" class="btn btn-outline-dark" style=" margin: 20px; margin-bottom: 20px;" />
+                                </span>                     
                                 </form> 
                             </div>
                         </div>
@@ -133,54 +134,49 @@
                 <hr>
             </div>
             <div class="container">
-                <form id="myform">
-                <ul style="list-style-type: none;">
-                        <li><h4>B.Tech</h4> 
-                            <select class="mdb-select md-form">
-                                <option value="" disabled selected>Select Branch</option>
-                                <option value="1">Mechanical Engineering</option>
-                                <option value="2">Computer Science & Engineering</option>
-                                <option value="3">Information Technology</option>
-                                <option value="3">Civil Engineering</option>
-                                <option value="3">Chemical Engineering</option>
-                              </select>
-                              <label class="mdb-main-label"></label>
-                    </li>
-                    <li><input type="text" class="input-title" placeholder="college/University"></li>
-                    <li><span>Session</span><input type="number" min="1900" max="2099" step="1" style="margin: 10px; margin-bottom: 10px;" /><span>to</span>
-                        <input type="number" min="1900" max="2099" step="1" /></li>
-                    <li><input type="number" min="1" max="100" id="myPercent" placeholder="%" class="input-title"/></li>
-                </ul>
-                <ul style="list-style-type: none;">
-                <li><h4>12<sup>th</sup></h4></li>
-                <li><input class="input-title" type="text" placeholder="School Name"></li>
-                <li><span>Year</span><input type="number" min="2000" max="2099" step="1" style="margin: 10px; margin-bottom: 10px;" /></li>
-                <li><input type="number" min="1" max="100" id="myPercent" placeholder="%" class="input-title"/></li>
-                </ul>
-                <ul style="list-style-type: none;">
-                    <li><h4>10<sup>th</sup></h4></li>
-                    <li><input class="input-title" type="text" placeholder="School Name"></li>
-                    <li><span>Year</span><input type="number" min="2000" max="2099" step="1" style="margin: 10px; margin-bottom: 10px;" /></li>
-                    <li><input type="number" min="1" max="100" id="myPercent" placeholder="%" class="input-title"/></li>
-                    </ul>
-                    </form>             
+                <div class="row">
+                    <div class="col">
+                        <div id="education" style="display: none">
+                                <input type="text"  class="input-title" placeholder="course"><br>
+                                <input type="text" class="input-title" placeholder="college/school name"><br>
+                                <span>Duration from</span><input type="date" style="margin: 10px; margin-bottom: 20px;">to
+                                <input type="date" style="margin: 10px; margin-bottom: 20px;"><br>
+                                <input type="text" class="input-title" placeholder="percentage/cgpa"><br>
+                                <input type="button" value="REMOVE" class="btn btn-outline-dark"
+                                onclick="this.parentNode.parentNode.removeChild(this.parentNode);"  style="margin: 20px; margin-bottom: 10px;"/><br /><br />
+                        </div> 
+                        <form method="post" action="#">
+                
+                            <span id="writeedu">
+                                <input type="button" onclick="expFields()" value="ADD MORE" class="btn btn-outline-dark" style=" margin: 20px; margin-bottom: 20px;" />
+                            </span>                     
+                        </form> 
+                    </div>
+                </div>
             </div>
             <button class="save-button">Save</button>
-        </section>
+            </section>
         <section class="Achievement">
             <div class="header">
-                <h2>ACHIEVEMENT</h2>
+                <h2>Achievement</h2>
                 <hr>
             </div>
             <div class="container">
-                <form action="#">
-                    <ul style="list-style-type: none;">
-                    <li><input type="text" class="input-text" placeholder="Your achievement"></li>
-                    <li><input type="text" class="input-text" placeholder="Your achievement"></li>
-                    <li><input type="text" class="input-text" placeholder="Your achievement"></li>
-                    <li><input type="text" class="input-text" placeholder="Your achievement"></li>
-                    </ul>
-                </form>
+                <div class="row">
+                    <div class="col">
+                        <div id="achievement" style="display: none">
+                            <input type="text" class="input-text" placeholder="Enter your achievement" required/>
+                            <input type="button" value="REMOVE" class="btn btn-outline-dark"
+                                onclick="this.parentNode.parentNode.removeChild(this.parentNode);"  style="margin: 20px; margin-bottom: 10px;"/><br /><br />
+                        </div> 
+                        <form method="post" action="#">
+                
+                            <span id="writeachi"></span>
+                        
+                            <input type="button" onclick="achiFields()" value="ADD MORE" class="btn btn-outline-dark" style=" margin: 20px; margin-bottom: 20px;" />                     
+                        </form> 
+                    </div>
+                </div>
             </div>
             <button class="save-button">Save</button>
         </section>

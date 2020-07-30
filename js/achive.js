@@ -1,8 +1,8 @@
 var counter = 0;
 
-            function moreFields() {
+            function achiFields() {
                 counter++;
-                var newFields = document.getElementById("readroot").cloneNode(true);
+                var newFields = document.getElementById("achievement").cloneNode(true);
                 newFields.id = '';
                 newFields.style.display = 'block';
                 var newField = newFields.childNodes;
@@ -11,8 +11,8 @@ var counter = 0;
                     if (theName)
                         newField[i].name = theName + counter;
                 }
-                var insertHere = document.getElementById("writeroot");
+                var insertHere = document.getElementById("writeachi");
                 insertHere.parentNode.insertBefore(newFields,insertHere);
             }
 
-            window.onload = moreFields;
+            window.onload = achiFields;
