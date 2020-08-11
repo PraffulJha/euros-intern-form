@@ -4,7 +4,7 @@
         <meta  charset="utf-8">
         <meta name="viewpoint" content="width=device-width, initial-scale=1">
         <title>form</title>
-        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" type="text/css" href="/css/style.css">
         <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
         <script type="text/javascript" src="./js/script.js"></script>
@@ -26,7 +26,7 @@
             </div>
                 <div class="Profile-basic-form">
                     <div class="container">
-                        <form action="profile.php" class="Profile-form-group" method="POST"> 
+                        <form action="./php/profile.php" class="Profile-form-group" method="POST"> 
                             <input type="text" class="input-text" placeholder="Name" name="name" required>
                             <input type="text" class="input-text" placeholder="Course" name="course"  required>
                             <input type="text" class="input-text" placeholder="college/university" name="college"  required>
@@ -50,16 +50,19 @@
                 <div class="row">
                     <div class="col">
                         <div id="skills" style="display: none">
-                            <input type="text"  class="input-title" placeholder="ADD skills"><br>
-                                <input type="radio">Begineer<input type="radio">Intermediate<input type="radio">Expert<br />
+                            <input type="text"  class="input-title" placeholder="ADD skills" name="skillsname"><br>
+                                <label for="Begineer" id="Begineer"><input type="radio" name="skillevel" id="Begineer" value="B" required\>Begineer</label><br />
+                                <label for="Intermediate" id="Intermediate"><input type="radio" name="skillevel" id="Intermediate" value="I">Intermediate</label><br />
+                                <label for="Expert" id="Expert"><input type="radio" name="skillevel" id="Expert" value="E">Expert</label><br />
+
                                 <span>IF you have any certificate</span>
-                                <input type="file">ADD HERE
+                                <input type="file" id="certificatefile" name="certificatefile" />
                             <input type="button" value="REMOVE" class="btn btn-outline-dark"
                                 onclick="this.parentNode.parentNode.removeChild(this.parentNode);" /><br /><br />
                                 
                                   
                         </div> 
-                        <form method="post" action="#">
+                        <form method="POST" action="./php/skills.php">
                 
                             <span id="writeskills">
                         

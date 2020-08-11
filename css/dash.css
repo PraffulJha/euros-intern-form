@@ -1,0 +1,25 @@
+html{
+    scroll-behavior: smooth;
+}
+
+.profile {
+    border: 30px solid #fff;
+    box-sizing: border-box;
+    outline: groove;
+    padding: 30px;
+    margin: 30px;
+    border-width: 40px;
+    
+}
+.view-btn{
+  background-color: #4c22c2; /* Green */
+  border: none;
+  float: right;
+  color: white;
+  padding: 12px 28px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 12px;
+}
